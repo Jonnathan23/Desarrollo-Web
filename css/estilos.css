@@ -16,6 +16,7 @@ html{
 }
 body{
     font-size: 16px;
+    background-image: linear-gradient(to top, #DFE9F3 0%, var(--blanco));
 }
 /*  */
 
@@ -24,46 +25,98 @@ h1{
     font-size: 3.5rem; /*--> 20px */
 }
 
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
 h1 span{
     font-size: 2rem; /*--> 10px */
 }
+
 
 .nav-fondo{    
     background-color: var(--secundario);
 }
 
 .contenedor{
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;    
 
 }
 
-.navegacion-principal{
-    padding: 1.5rem;
-    display: flex; /*Permite usar flexbox*/
-    justify-content: space-between;
-}
-.navegacion-principal a{
+.bt{
+    background-color: var(--secundario);
     color: var(--blanco);
-    
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
     text-decoration: none;
-    
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.5rem;    
+    width: 90%;
+    text-align: center;
 }
 
-.navegacion-principal a :hover{
-    color: var(--oscuro);
-    padding: 1rem;
+@media(min-width: 780px){
+    .bt{
+        width: auto;
+    }
+}
+
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.navegacion-principal{    
+    display: flex; /*? Permite usar flexbox*/    
+    flex-direction: column;
+       
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal{            
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a{
+    padding: 1.5rem;
+    color: var(--blanco);    
     text-decoration: none;
-    background: var(--primario);
+    font-size: 2rem;
+    font-weight: bold;   
+}
+
+.navegacion-principal a:hover{    
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+@media (min-with: 480px) {
+    
 }
 
 .h{
     background-image: url(../imgs/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 45rem;
-    padding: 2rem;
+    height: 45rem;    
     position:relative;
+    margin-bottom: 2rem; 
 }
 
 .contenido-h{
@@ -71,4 +124,95 @@ h1 span{
     background-color: rgba(0,0,0, .8);
     width: 100%;
     height: 100%;
+
+    /** Para centrar vertical y horizontalmente, uso de flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+
+}
+
+.contenido-h h2,
+.contenido-h p{
+    color: var(--blanco);
+}
+
+
+/** Servicios */
+
+@media (min-width: 780px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: 33.333% 33.333% 33.333% ;
+        /*? Otras maneras de dividir en columnas
+        /** grid-template-columns: repeat(3, 1fr);  --> repite 3 veces 1 fraccion
+        /** grid-template-columns: 1fr 1fr 1fr;
+        */
+
+        column-gap: 2rem;
+    }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+    text-align: center;
+}
+
+.servicio p{
+    line-height: 2;
+}
+
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/** Contacto */
+
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100% ); /*? Utilizar el valor más pequeño*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    color: var(--primario);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.contenedor-campos{
+
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
 }
