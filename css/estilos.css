@@ -10,6 +10,7 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-snap-type: y mandatory;
 }
 *, *::before, *::after{
     box-sizing: inherit;
@@ -141,7 +142,13 @@ h1 span{
 .contenido-h p{
     color: var(--blanco);
 }
-
+/** SCROLL */
+.servicios,
+.navegacion-principal,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
 
 /** Servicios */
 
