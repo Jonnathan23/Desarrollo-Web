@@ -63,6 +63,10 @@ h1 span{
     border-radius: 0.5rem;    
     width: 90%;
     text-align: center;
+    border: none;    
+}
+.bt:hover{
+    cursor: pointer;
 }
 
 @media(min-width: 780px){
@@ -202,8 +206,21 @@ h1 span{
     font-weight: bold;
     margin-bottom: 2rem;
 }
-.contenedor-campos{
+@media (min-width: 780px) {
+    
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+        grid-template-rows: auto auto 20rem;
+    }    
 
+    .campo:nth-child(3){
+        grid-column: 1/3;
+    }
+    .campo:nth-child(4){
+        grid-column: 1/3;
+    }
 }
 
 .campo{
@@ -215,4 +232,23 @@ h1 span{
     font-weight: bold;
     margin-bottom: 0.5rem;
     display: block;
+}
+
+.campo input{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+
+}
+
+.campo textarea{
+    height: 10.5rem;
+    width: 100%;
+    border-radius: .5rem;
+}
+
+/** FOOOTER */
+footer{
+    text-align: center;
 }
