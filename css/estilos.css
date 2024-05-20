@@ -1,58 +1,68 @@
-:root{
-    --blanco:#fff;
-    --oscuro:#212121;
-    --primario:#FFC107;
+:root {
+    --blanco: #fff;
+    --oscuro: #212121;
+    --primario: #FFC107;
     --secundario: #0097A7;
     --gris: #757575;
 }
 
 /* Reicio para que 1rem = 10px*/
-html{
+html {
     font-size: 62.5%;
     box-sizing: border-box;
     scroll-snap-type: y mandatory;
 }
-*, *::before, *::after{
+
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
-body{
+
+body {
     font-size: 16px;
     background-image: linear-gradient(to top, #DFE9F3 0%, var(--blanco));
 }
+
 /*  */
 
-h1{
+h1 {
     text-align: center;
-    font-size: 3.5rem; /*--> 20px */
+    font-size: 3.5rem;
+    /*--> 20px */
 }
 
-h2{
+h2 {
     font-size: 2.5rem;
 }
-h3{
+
+h3 {
     font-size: 1.5rem;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
     text-align: center;
 }
 
-h1 span{
-    font-size: 2rem; /*--> 10px */
+h1 span {
+    font-size: 2rem;
+    /*--> 10px */
 }
 
 
-.nav-fondo{    
+.nav-fondo {
     background-color: var(--secundario);
 }
 
-.contenedor{
+.contenedor {
     max-width: 120rem;
-    margin: 0 auto;    
+    margin: 0 auto;
 
 }
 
-.bt{
+.bt {
     background-color: var(--secundario);
     color: var(--blanco);
     padding: 1rem 3rem;
@@ -61,72 +71,76 @@ h1 span{
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    border-radius: 0.5rem;    
+    border-radius: 0.5rem;
     width: 90%;
     text-align: center;
-    border: none;    
+    border: none;
 }
-.bt:hover{
+
+.bt:hover {
     cursor: pointer;
 }
 
-@media(min-width: 780px){
-    .bt{
+@media(min-width: 780px) {
+    .bt {
         width: auto;
     }
 }
 
-.sombra{
-    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
-    -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
-    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.54);
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.54);
     background-color: var(--blanco);
     padding: 2rem;
     border-radius: 1.5rem;
 }
 
-.navegacion-principal{    
-    display: flex; /*? Permite usar flexbox*/    
+.navegacion-principal {
+    display: flex;
+    /*? Permite usar flexbox*/
     flex-direction: column;
-       
+
 }
 
 @media (min-width: 768px) {
-    .navegacion-principal{            
+    .navegacion-principal {
         flex-direction: row;
         justify-content: space-between;
     }
 }
 
-.navegacion-principal a{
+.navegacion-principal a {
     padding: 1.5rem;
-    color: var(--blanco);    
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: bold;   
 }
 
-.navegacion-principal a:hover{    
+.navegacion-principal a {
+    padding: 1.5rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navegacion-principal a:hover {
     background-color: var(--primario);
     color: var(--oscuro);
 }
 
-@media (min-with: 480px) {
-    
-}
+@media (min-with: 480px) {}
 
-.h{
+.h {
     background-image: url(../imgs/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 45rem;    
-    position:relative;
-    margin-bottom: 2rem; 
+    height: 45rem;
+    position: relative;
+    margin-bottom: 2rem;
 }
 
-.contenido-h{
+.contenido-h {
     position: absolute;
-    background-color: rgba(0,0,0, .8);
+    background-color: rgba(0, 0, 0, .8);
     width: 100%;
     height: 100%;
 
@@ -134,18 +148,19 @@ h1 span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;
 
 }
 
 .contenido-h h2,
-.contenido-h p{
+.contenido-h p {
     color: var(--blanco);
 }
+
 /** SCROLL */
 .servicios,
 .navegacion-principal,
-.formulario{
+.formulario {
     scroll-snap-align: center;
     scroll-snap-stop: always;
 }
@@ -153,9 +168,9 @@ h1 span{
 /** Servicios */
 
 @media (min-width: 780px) {
-    .servicios{
+    .servicios {
         display: grid;
-        grid-template-columns: 33.333% 33.333% 33.333% ;
+        grid-template-columns: 33.333% 33.333% 33.333%;
         /*? Otras maneras de dividir en columnas
         /** grid-template-columns: repeat(3, 1fr);  --> repite 3 veces 1 fraccion
         /** grid-template-columns: 1fr 1fr 1fr;
@@ -165,23 +180,23 @@ h1 span{
     }
 }
 
-.servicio{
+.servicio {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.servicio h3{
+.servicio h3 {
     color: var(--secundario);
     font-weight: normal;
     text-align: center;
 }
 
-.servicio p{
+.servicio p {
     line-height: 2;
 }
 
-.servicio .iconos{
+.servicio .iconos {
     height: 15rem;
     width: 15rem;
     background-color: var(--primario);
@@ -193,55 +208,74 @@ h1 span{
 }
 
 /** Contacto */
+.error {
+    background-color: rgba(185, 0, 0, .7);
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    text-transform: uppercase;
+}
 
-.formulario{
+.enviar {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.formulario {
     background-color: var(--gris);
-    width: min(60rem, 100% ); /*? Utilizar el valor más pequeño*/
+    width: min(60rem, 100%);
+    /*? Utilizar el valor más pequeño*/
     margin: 0 auto;
     padding: 2rem;
     border-radius: 1.5rem;
 }
 
-.formulario fieldset{
+.formulario fieldset {
     border: none;
 }
 
-.formulario legend{
+.formulario legend {
     color: var(--primario);
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 2rem;
 }
+
 @media (min-width: 780px) {
-    
-    .contenedor-campos{
+
+    .contenedor-campos {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 1rem;
         grid-template-rows: auto auto 20rem;
-    }    
 
-    .campo:nth-child(3){
+    }
+
+    .campo:nth-child(3) {
         grid-column: 1/3;
     }
-    .campo:nth-child(4){
+
+    .campo:nth-child(4) {
         grid-column: 1/3;
     }
 }
 
-.campo{
+.campo {
     margin-bottom: 1rem;
 }
 
-.campo label{
+.campo label {
     color: var(--blanco);
     font-weight: bold;
     margin-bottom: 0.5rem;
     display: block;
 }
 
-.campo input{
+.campo input {
     width: 100%;
     border: none;
     padding: 1.5rem;
@@ -249,13 +283,13 @@ h1 span{
 
 }
 
-.campo textarea{
+.campo textarea {
     height: 10.5rem;
     width: 100%;
     border-radius: .5rem;
 }
 
 /** FOOOTER */
-footer{
+footer {
     text-align: center;
 }
